@@ -4,12 +4,13 @@
     <meta charset="utf-8">
     <title>Free Redeem Code</title>
     <script type="text/javascript">
-      var pathSegments = window.location.pathname.split('/').filter(Boolean);
-      var redirectPath = '/Free-Redeem-code/';
-      if (pathSegments.length > 1) {
-        redirectPath += '#/' + pathSegments.slice(1).join('/');
-      }
-      window.location.replace(redirectPath);
+      var segmentCount = 1;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        '/Free-Redeem-code/#' + 
+        l.pathname.slice(1)
+      );
     </script>
 </head>
 <body>
