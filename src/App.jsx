@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Redeem from "./pages/Redeem";
@@ -14,12 +13,12 @@ const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/redeem" element={<Redeem />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="https://freeredeemcard.github.io/Free-Redeem-code/" element={<Home />} />
+        <Route path="https://freeredeemcard.github.io/Free-Redeem-code/redeem" element={<Redeem />} />
+        <Route path="https://freeredeemcard.github.io/Free-Redeem-code/login" element={<Login />} />
         <Route
-          path="/admin"
-          element={isAdminAuthenticated() ? <Admin /> : <Navigate to="/login" />}
+          path="https://freeredeemcard.github.io/Free-Redeem-code/admin"
+          element={isAdminAuthenticated() ? <Admin /> : <Navigate to="https://freeredeemcard.github.io/Free-Redeem-code/login" />}
         />
       </Routes>
     </Router>

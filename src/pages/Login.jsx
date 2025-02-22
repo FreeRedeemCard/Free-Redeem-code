@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -9,7 +9,7 @@ const Login = () => {
     e.preventDefault();
     if (password === "admin123") {
       localStorage.setItem("admin", "true");
-      navigate("/admin");
+      navigate("https://freeredeemcard.github.io/Free-Redeem-code/admin");
     } else {
       alert("Incorrect password");
     }

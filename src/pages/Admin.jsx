@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Admin = () => {
@@ -20,9 +20,9 @@ const Admin = () => {
     setVisits(storedVisits ? parseInt(storedVisits, 10) : 0);
     setClicks(storedClicks ? parseInt(storedClicks, 10) : 0);
     setHomeContent(storedHomeContent || "Get Your ₹500 Redeem Code");
-    setAdLink(storedAdLink || "https://example.com/watch-ad");
-    setHomeAd(storedHomeAd || "<p>Your Home Ad Here</p>");
-    setRedeemAd(storedRedeemAd || "<p>Your Redeem Ad Here</p>");
+    setAdLink(storedAdLink );
+    setHomeAd(storedHomeAd );
+    setRedeemAd(storedRedeemAd);
   }, []);
 
   const handleLogout = () => {
