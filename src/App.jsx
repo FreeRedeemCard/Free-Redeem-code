@@ -11,14 +11,14 @@ const App = () => {
   };
 
   return (
-    <Router>
+    <Router basename="/Free-Redeem-code">
       <Routes>
-        <Route path="https://freeredeemcard.github.io/Free-Redeem-code/" element={<Home />} />
-        <Route path="https://freeredeemcard.github.io/Free-Redeem-code/redeem" element={<Redeem />} />
-        <Route path="https://freeredeemcard.github.io/Free-Redeem-code/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/redeem" element={<Redeem />} />
+        <Route path="/login" element={<Login />} />
         <Route
-          path="https://freeredeemcard.github.io/Free-Redeem-code/admin"
-          element={isAdminAuthenticated() ? <Admin /> : <Navigate to="https://freeredeemcard.github.io/Free-Redeem-code/login" />}
+          path="/admin"
+          element={isAdminAuthenticated() ? <Admin /> : <Navigate to="/login" />}
         />
       </Routes>
     </Router>
