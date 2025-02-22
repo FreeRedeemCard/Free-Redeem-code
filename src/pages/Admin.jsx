@@ -27,7 +27,7 @@ const Admin = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("admin");
-    navigate("/login")
+    navigate("/Free-Redeem-code/login")
   };
 
   const handleHomeContentChange = (e) => {
