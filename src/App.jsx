@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import Redeem from "./pages/Redeem";
 import Admin from "./pages/Admin";
@@ -11,7 +11,7 @@ const App = () => {
   };
 
   return (
-    <Router basename="/Free-Redeem-code">
+    <HashRouter basename="/Free-Redeem-code">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/redeem" element={<Redeem />} />
@@ -21,7 +21,7 @@ const App = () => {
           element={isAdminAuthenticated() ? <Admin /> : <Navigate to="/login" />}
         />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 };
 
