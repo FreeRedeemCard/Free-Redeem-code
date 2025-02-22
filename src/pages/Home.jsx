@@ -51,12 +51,12 @@ const Home = () => {
         text: 'You have already redeemed a code. Please use the existing code.',
         confirmButtonText: 'OK'
       }).then(() => {
-        navigate("https://freeredeemcard.github.io/Free-Redeem-code/redeem", { state: { giftCard: existingBrand, code: existingCode } });
+        navigate("/redeem", { state: { giftCard: existingBrand, code: existingCode } });
       });
     } else {
       const clicks = localStorage.getItem("clicks");
       localStorage.setItem("clicks", clicks ? parseInt(clicks, 10) + 1 : 1);
-      navigate("https://freeredeemcard.github.io/Free-Redeem-code/redeem", { state: { giftCard } });
+      navigate("/redeem", { state: { giftCard } });
     }
   };
 

@@ -27,7 +27,7 @@ const Admin = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("admin");
-    navigate("/login");
+    navigate("/login")
   };
 
   const handleHomeContentChange = (e) => {
