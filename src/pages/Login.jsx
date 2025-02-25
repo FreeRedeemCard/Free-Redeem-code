@@ -9,7 +9,7 @@ const Login = () => {
     e.preventDefault();
     if (password === "admin123") {
       localStorage.setItem("admin", "true");
-      navigate("/admin");
+      navigate("#/admin");
     } else {
       alert("Incorrect password");
     }
